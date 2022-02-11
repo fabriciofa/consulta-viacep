@@ -5,53 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta ViaCEP</title>
-
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- navbar -->
-    <header>
-        <nav>
-            <h1>Consulta ViaCEP</h1>
-            <div>Contato</div>
-        </nav>
-    </header>
-    <!-- main -->
-    <main>
-        <section id="form-section">
-            <!-- form -->
-            <div>
-                <form name="newAddress">
-                    <div>
-                        <label for="zipcode">CEP:</label>
-                        <input type="text" name="zipcode" id="zipcode" placeholder="CEP">
-                    </div>
-                    <div>
-                        <label for="street">Logradouro:</label>
-                        <input type="text" name="street" id="street" placeholder="Logradouro">
-                    </div>
-                    <div>
-                        <label for="number">Número:</label>
-                        <input type="text" name="number" id="number" placeholder="Número">
-                    </div>
-                    <div>
-                        <label for="city">Cidade:</label>
-                        <input type="text" name="city" id="city" placeholder="Cidade">
-                    </div>
-                    <div>
-                        <button type="submit">Salvar</button>
-                        <button>Limpar</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <section id="list-section">
-            <!-- address list -->
-            <div>
-                <h3>Cidade</h3>
-                <p>Logradouro, número</p>
-                <p>CEP</p>
-            </div>
-        </section>
-    </main>
+   <!-- navbar -->
+   <header class="nav-container">
+    <nav class="nav-main">
+        <h1>Consulta ViaCEP</h1>
+        <div class="contact-link">Contato</div>
+    </nav>
+</header>
+<!-- main -->
+<main>
+    <section id="form-section" class="form-container">
+        <!-- form -->
+        <div class="card-form">
+            <form name="newAddress">
+                <div class="form-control">
+                    <label for="zipcode">CEP:</label>
+                    <input type="text" name="zipcode" id="zipcode" class="form-input" placeholder="CEP">
+                    <div class="error-message"></div>
+                </div>
+                <div class="form-control">
+                    <label for="street">Logradouro:</label>
+                    <input type="text" name="street" id="street" class="form-input" placeholder="Logradouro" disabled>
+                </div>
+                <div class="form-control">
+                    <label for="number">Número:</label>
+                    <input type="text" name="number" id="number" class="form-input" placeholder="Número">
+                    <div class="error-message"></div>
+                </div>
+                <div class="form-control">
+                    <label for="city">Cidade:</label>
+                    <input type="text" name="city" id="city" class="form-input" placeholder="Cidade" disabled>
+                </div>
+                <div class="btn-container">
+                    <button class="btn btn-left" type="submit">Salvar</button>
+                    <button class="btn btn-right">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="list-section" class="list-container">
+        <!-- address list -->
+        <div class="card-list-item">
+            <h3>Cidade</h3>
+            <p class="address-line">Logradouro, número</p>
+            <p class="address-zipcode">CEP</p>
+        </div>
+    </section>
+</main>
 </body>
 </html>
