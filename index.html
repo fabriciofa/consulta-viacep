@@ -29,7 +29,7 @@
                 <div class="form-control">
                     <label for="zipcode">CEP:</label>
                     <input type="text" name="zipcode" id="zipcode" class="form-input" placeholder="CEP">
-                    <div class="error-message"></div>
+                    <div class="error-message" data-error="zipcode"></div>
                 </div>
                 <div class="form-control">
                     <label for="street">Logradouro:</label>
@@ -38,27 +38,24 @@
                 <div class="form-control">
                     <label for="number">Número:</label>
                     <input type="text" name="number" id="number" class="form-input" placeholder="Número">
-                    <div class="error-message"></div>
+                    <div class="error-message" data-error="number"></div>
                 </div>
                 <div class="form-control">
                     <label for="city">Cidade:</label>
                     <input type="text" name="city" id="city" class="form-input" placeholder="Cidade" disabled>
                 </div>
                 <div class="btn-container">
-                    <button class="btn btn-left" type="submit">Salvar</button>
-                    <button class="btn btn-right">Limpar</button>
+                    <button name="btnSave" class="btn btn-left" type="submit">Salvar</button>
+                    <button name="btnClear" class="btn btn-right">Limpar</button>
                 </div>
             </form>
         </div>
     </section>
     <section id="list-section" class="list-container">
         <!-- address list -->
-        <div class="card-list-item">
-            <h3>Cidade</h3>
-            <p class="address-line">Logradouro, número</p>
-            <p class="address-zipcode">CEP</p>
-        </div>
     </section>
 </main>
+
+<script type="module" src="js/consulta-viacep.js"></script>
 </body>
 </html>
